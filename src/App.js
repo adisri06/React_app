@@ -11,8 +11,32 @@ const categories =[
   {id:3, title:'mushroom', item:["glowing","poisonous"]}
 
 ]
+const users = [
+  { id: 1, name: 'Admin', role: 'admin' },
+  { id: 2, name: 'User1', role: 'user' },
+  { id: 3, name: 'User2', role: 'user' },
+];
 
-function App() {
+const UserGreeting = () => <p>Welcome back, User!</p>;
+const AdminGreeting = () => <p>Welcome back, Admin!</p>;
+const GuestGreeting = () => <p>Please sign up or log in.</p>;
+
+const greeting=({role}) =>{
+  switch (role){
+    case 'Admin':
+      return <AdminGreeting/>;
+    case 'user':
+      return <UserGreeting/>
+    case 'guest':
+      return <GuestGreeting/>
+
+
+  }
+}
+let isloggedin = false;
+let userRole = 'admin';
+
+const App = ({isloggedin, userRole}) => {
   const handleClick = (title) => {
     alert(`You clicked on ${title}`);
   };
@@ -20,15 +44,23 @@ function App() {
   let count = 1;
   let name = {
     firstName : "Shubham",
-    lastName : "Srivastava"
+    lastName : "Sriva"
   }
   return (
     <form>
+      <p/>Length of {name.firstName} {">"} {name.lastName} {name.firstName.length > name.lastName.length ? isloggedin = 'True': isloggedin = 'False'}<p/>
       {/* Accessing variable */}
+      <div>
+      {isloggedin ? <greeting role={userRole} /> : <GuestGreeting />}
+      <ul>
+        {users.map((user) => (
+          user.role === 'user' && <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
       <h1>Welcome {name.firstName} {name.lastName}</h1><br/><br/>
       <input type='text' placeholder='name'/>Write your name {count} times<br/><br/>
       <p>Let total sum be ({(count + count++ )* count --}) </p><br/><br/>
-      <p/>Length of {name.firstName} {">"} {name.lastName} {name.firstName.length > name.lastName.length ? "True": "False"}<p/>
       <input type='password' placeholder='password'/><br/><br/>
       <input type='submit' nvalue= "log"/><br/><br/>
     {/* event handler */}
@@ -58,6 +90,8 @@ function App() {
         <td>{catr.id}</td>
         <td>{catr.title}</td>
         <td>{catr.item.join(',')}</td>
+        {/* conditional rendering */}
+        <td>{catr.item.length >= 2 ? <h4>available</h4>:<h4>Not available</h4>}</td>
         </tr>
        )) }
       </tbody>
@@ -81,9 +115,14 @@ function App() {
     </div>
     
   {/* react logo */}
-      <div className="App">
+
+  {
+  
+      < div className="App" >
+        {isloggedin ? <greeting role={userRole} /> : 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -96,7 +135,9 @@ function App() {
           Learn React
         </a>
       </header>
+}
     </div>
+}
     </form>
 
 
