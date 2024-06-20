@@ -1,0 +1,14 @@
+.student-container {
+    padding: 20px;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.add-student-button {
+    margin-top: 20px;
+}
