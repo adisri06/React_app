@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import '../css/login.css'; 
 import { validateUser, saveUser } from '../userdatabase';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'react-bootstrap/Button';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -49,9 +50,9 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">{isRegistered ? 'Sign In' : 'Register'}</button>
+        <button variant="contained" color='primary'>{isRegistered ? 'Sign In' : 'Register'}</button>
         {message && <p>{message}</p>}
-        <button  onClick={() => setIsRegistered(!isRegistered)}>
+        <button className="btn btn-sucess" onClick={() => setIsRegistered(!isRegistered)}>
         {isRegistered ? 'Need to register?' : 'Already registered?'}
       </button>
   
