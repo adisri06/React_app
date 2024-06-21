@@ -9,61 +9,20 @@ const Student = () => {
         { id: 2, name: 'Jane Smith', age: 22, grade: 'B' }
     ]);
 
-    const [newStudent, setNewStudent] = useState({ name: '', age: '', grade: '' });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setNewStudent(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleAddStudent = () => {
-        setStudents(prevStudents => [
-            ...prevStudents,
-            { id: prevStudents.length + 1, ...newStudent }
-        ]);
-        setNewStudent({ name: '', age: '', grade: '' });
+    const addStudent = (newStudent) => {
+        const newStudentWithId = { id: students.length + 1, ...newStudent };
+        setStudents(prevStudents => [...prevStudents, newStudentWithId]);
     };
 
     return (
         <div className="student-container">
             <h1>Student List</h1>
-            <Students students={students} />
-            <h2>Add New Student</h2>
-            <form className="student-form">
-                <TextField
-                    label="Name"
-                    name="name"
-                    value={newStudent.name}
-                    onChange={handleChange}
-                    margin="normal"
-                />
-                <TextField
-                    label="Age"
-                    name="age"
-                    type="number"
-                    value={newStudent.age}
-                    onChange={handleChange}
-                    margin="normal"
-                />
-                <TextField
-                    label="Grade"
-                    name="grade"
-                    value={newStudent.grade}
-                    onChange={handleChange}
-                    margin="normal"
-                />
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleAddStudent}
-                    className="add-student-button"
-                >
-                    Add Student
-                </Button>
-            </form>
+            {/* The addstudent function of parentclass is passed to the child component , then only it can modify the prop value */}
+            {/* Students : child component with whom we share 
+            students(small s) : its the statevariable of parent class
+            {students} pass an object which is passed  */}
+
+            <Students students={students} addStudent={addStudent} />
         </div>
     );
 };

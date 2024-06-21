@@ -1,0 +1,5 @@
+[
+    { "id": 1, "name": "Alice Johnson", "age": 34, "purchaseAmount": 250.75 },
+    { "id": 2, "name": "Bob Smith", "age": 45, "purchaseAmount": 320.00 },
+    { "id": 3, "name": "Carol White", "age": 29, "purchaseAmount": 150.50 }
+]
