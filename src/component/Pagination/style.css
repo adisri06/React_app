@@ -1,0 +1,60 @@
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Different Colors */
+button:first-child {
+    background-color: #ff5733; /* Red */
+    color: white;
+}
+
+button:nth-child(2) {
+    background-color: #ffa500; /* Orange */
+    color: white;
+}
+
+button:nth-last-child(2) {
+    background-color: #008000; /* Green */
+    color: white;
+}
+
+button:last-child {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+/* Numbered Pagination Buttons */
+button:not(:first-child):not(:last-child):not(:nth-child(2)):not(:nth-last-child(2)) {
+    background-color: #f0f0f0; /* Light Gray */
+    color: black;
+    border: 1px solid #ccc;
+}
+
+/* Hover Effects */
+button:hover:not(:disabled) {
+    filter: brightness(1.2);
+}
+
+select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
