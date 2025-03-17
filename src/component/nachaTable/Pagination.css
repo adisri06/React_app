@@ -1,0 +1,52 @@
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Centers pagination under the table */
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px;
+    gap: 5px;
+    width: fit-content; /* Restricts width to content */
+    margin-left: auto; /* Centers it */
+    margin-right: auto; /* Centers it */
+}
+
+.pagination-button {
+    padding: 6px 10px; /* Reduce padding to match all buttons */
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.1s;
+    min-width: 35px; /* Ensures uniform button size */
+    text-align: center;
+    font-size: 14px; /* Standardize font size */
+}
+
+/* Hover effect */
+.pagination-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Fix First & Last buttons (remove oversized styles) */
+.pagination-button.first,
+.pagination-button.last {
+    padding: 4px 8px; /* Reduce padding */
+    font-size: 14px; /* Adjust font size */
+    min-width: 50px; /* Uniform width */
+    height: 32px; /* Set fixed height same as other buttons */
+}
+
+/* Highlight the active/current page in blue */
+.pagination-button.active {
+    background-color: #007bff !important;
+    color: white !important;
+    font-weight: bold;
+    border-color: #0056b3;
+}
+
+/* Prevent full-width stretching */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}

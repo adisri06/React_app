@@ -1,0 +1,166 @@
+/* Table Container */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: 900px;
+    margin: 200px auto 10px; /* Merge margin properties */
+}
+
+
+/* Table Header with Blue Background */
+.blue-header {
+    background-color: #007bff !important;
+    color: white !important;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+    padding: 6px;
+}
+.table-header {
+    background-color: #007bff !important; /* Blue header */
+    color: white !important;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+    padding: 6px;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 4px; /* Adjust spacing */
+}
+.search-box {
+    width: 100%;
+}
+.search-bar-white {
+    font-size: 12px;
+    width: 90%;
+    padding: 4px;
+}
+
+
+/* Search Input */
+.search-bar-white {
+    background-color: white !important; /* Ensures search bar is white */
+    color: black !important;
+    border: 1px solid #ccc !important;
+    font-size: 12px;
+}
+/* Table Cell */
+.MuiTableCell-root {
+    padding: 2px 6px !important;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Table Row Hover Effect */
+.hovered-row {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hovered-row:hover {
+    transform: scale(1.01);
+    background: #f1f8ff !important;
+}
+
+/* Search Icon */
+.search-icon {
+    padding-left: 10px !important;
+    margin-left: 10px !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* Search Input */
+.dynamic-input {
+    margin-top: 2px;
+    padding: 2px;
+    font-size: 12px;
+    width: 100%;
+    min-width: 80px;
+}
+
+/* Action Buttons */
+.action-btn {
+    margin-right: 3px;
+    font-size: 10px;
+    padding: 4px 8px;
+}
+
+/* Pagination & Reset Button in Same Row */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+.pagination button,
+.pagination span {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.pagination button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Highlight the active/current page in blue */
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Reset Button Styling */
+.reset-btn {
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    margin-left: 5px;
+}
+.action-btn {
+    padding: 2px !important;  /* Reduce padding */
+    min-width: 30px;  /* Keep button small */
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn + .action-btn {
+    margin-left: 8px; /* Add left padding between buttons */
+}
+
+.action-btn svg {
+    font-size: 16px; /* Reduce icon size */
+}
+
+.table-cell-actions {
+    white-space: nowrap; /* Prevents wrapping */
+    text-align: center; /* Centers icons */
+    padding: 4px 8px; /* Adjust padding */
+}
