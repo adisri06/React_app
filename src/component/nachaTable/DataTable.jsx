@@ -10,6 +10,7 @@ import {
   TextField,
   IconButton,
 } from "@mui/material";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import SearchIcon from "@mui/icons-material/Search";
 import EditIcon from "@mui/icons-material/Edit";
 import Pagination from "./Pagination";
@@ -137,7 +138,7 @@ const DataTable = ({ columns, data }) => {
                 ))}
                 <TableCell className="table-cell-actions">
                   <IconButton size="small" className="action-btn" title="View" onClick={() => handleActionClick("View", row)}>
-                    <SearchIcon style={{ fontSize: "16px" }} />
+                    <VisibilityIcon style={{ fontSize: "16px" }} />
                   </IconButton>
                   <IconButton size="small" className="action-btn" title="Modify" onClick={() => handleActionClick("Modify", row)}>
                     <EditIcon style={{ fontSize: "16px" }} />

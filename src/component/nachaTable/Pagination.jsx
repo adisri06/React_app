@@ -19,7 +19,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
       {/* Previous Button */}
       <button
-        className="pagination-button"
+        className="pagination-button-prev"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
@@ -39,7 +39,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
       {/* Next Button */}
       <button
-        className="pagination-button"
+        className="pagination-button-next"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >

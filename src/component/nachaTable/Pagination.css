@@ -24,16 +24,28 @@
 
 /* Hover effect */
 .pagination-button:hover {
-    background-color: #e0e0e0;
+    background-color: rgb(122, 153, 230);
 }
-
+.pagination-button-next,
+.pagination-button-prev{
+    padding: 6px 10px; /* Reduce padding to match all buttons */
+    border: 1px solid #ccc;
+    background-color: rgb(81, 122, 225) !important;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.1s;
+    min-width: 35px; /* Ensures uniform button size */
+    text-align: center;
+    font-size: 14px; 
+}
 /* Fix First & Last buttons (remove oversized styles) */
 .pagination-button.first,
 .pagination-button.last {
+    background-color: blue;
     padding: 4px 8px; /* Reduce padding */
     font-size: 14px; /* Adjust font size */
     min-width: 50px; /* Uniform width */
-    height: 32px; /* Set fixed height same as other buttons */
+    height: 35px; /* Set fixed height same as other buttons */
 }
 
 /* Highlight the active/current page in blue */
