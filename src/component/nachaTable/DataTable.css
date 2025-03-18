@@ -8,8 +8,7 @@
     margin: 200px auto 10px; /* Merge margin properties */
 }
 
-
-/* Table Header with Blue Background */
+/* Table Header */
 .blue-header {
     background-color: #007bff !important;
     color: white !important;
@@ -17,44 +16,59 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    text-align: center;
-    padding: 6px;
+    text-align: center ;
+    padding: 12px 6px !important; /* Increased padding */
+    height: 50px !important; /* Explicitly setting height */
+    vertical-align: middle;
 }
-.table-header {
-    background-color: #007bff !important; /* Blue header */
-    color: white !important;
-    font-weight: bold;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    text-align: center;
-    padding: 6px;
+.MuiTableCell-root {
+    text-align: center !important;
+    vertical-align: middle !important;
 }
-.header-container {
+/* Header Content */
+.header-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    gap: 4px; /* Adjust spacing */
-}
-.search-box {
+    justify-content: flex-start;
+    text-align: center ;
+    gap: 6px;
     width: 100%;
-}
-.search-bar-white {
-    font-size: 12px;
-    width: 90%;
-    padding: 4px;
+    padding-left: 10px;  /* Ensure spacing remains consistent */
 }
 
+/* Search Box */
+.search-box {
+    width: auto; /* Prevent stretching */
+    max-width: 250px; 
+    display: flex;
+    align-items: center; /* Ensure proper alignment */
+}
 
-/* Search Input */
+/* Search Bar */
 .search-bar-white {
-    background-color: white !important; /* Ensures search bar is white */
+    background-color: white !important;
     color: black !important;
     border: 1px solid #ccc !important;
-    font-size: 12px;
+    font-size: 14px;
+    width: 120px !important;  /* Fixed width */
+    max-width: 150px;  /* Prevent stretching */
 }
+
+/* Ensure search bar does not push icons */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Keep search box aligned */
+    gap: 8px;  /* Maintain spacing */
+}
+.search-icon-wrapper {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+    min-width: 40px;  /* Ensures space is reserved for the button */
+}
+
 /* Table Cell */
 .MuiTableCell-root {
     padding: 2px 6px !important;
@@ -73,30 +87,25 @@
 }
 
 /* Search Icon */
-.search-icon {
-    padding-left: 10px !important;
-    margin-left: 10px !important;
-    width: 12px !important;
-    height: 12px !important;
+.icon-btn {
+    background-color: #007bff !important;
+    color: black !important;
+    border-radius: 50%;
+    width: 28px; /* Slightly bigger for better UI */
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px; /* Add slight spacing from text */
 }
 
-/* Search Input */
-.dynamic-input {
-    margin-top: 2px;
-    padding: 2px;
-    font-size: 12px;
-    width: 100%;
-    min-width: 80px;
+.icon-btn svg {
+    font-size: 14px !important;
 }
 
-/* Action Buttons */
-.action-btn {
-    margin-right: 3px;
-    font-size: 10px;
-    padding: 4px 8px;
-}
-
-/* Pagination & Reset Button in Same Row */
+/* Pagination */
 .pagination-wrapper {
     display: flex;
     justify-content: center;
@@ -105,7 +114,6 @@
     margin-top: 10px;
 }
 
-/* Pagination */
 .pagination {
     display: flex;
     justify-content: center;
@@ -128,39 +136,8 @@
     background-color: #e0e0e0;
 }
 
-/* Highlight the active/current page in blue */
 .pagination .active {
     background-color: #007bff;
     color: white;
     font-weight: bold;
-}
-
-/* Reset Button Styling */
-.reset-btn {
-    padding: 4px 8px !important;
-    font-size: 12px !important;
-    margin-left: 5px;
-}
-.action-btn {
-    padding: 2px !important;  /* Reduce padding */
-    min-width: 30px;  /* Keep button small */
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.action-btn + .action-btn {
-    margin-left: 8px; /* Add left padding between buttons */
-}
-
-.action-btn svg {
-    font-size: 16px; /* Reduce icon size */
-}
-
-.table-cell-actions {
-    white-space: nowrap; /* Prevents wrapping */
-    text-align: center; /* Centers icons */
-    padding: 4px 8px; /* Adjust padding */
 }
