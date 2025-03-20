@@ -14,10 +14,12 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
+
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+
 import Pagination from "./Pagination";
-import { toast, ToastContainer } from "react-toastify"; // If not already imported
+import { toast, ToastContainer } from "react-toastify"; 
 import "./DataTable.css";
 
 const DataTable = ({ columns, data }) => {
@@ -119,6 +121,7 @@ const [selectedRow, setSelectedRow] = useState(null);
               ))}
             </TableRow>
           </TableHead>
+         
           <TableBody>
   {displayedData.length === 0 ? (
     <TableRow>
