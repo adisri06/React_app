@@ -141,3 +141,6 @@
     color: white;
     font-weight: bold;
 }
+.rej-description {
+    text-align: left !important;
+  }

@@ -8,6 +8,8 @@ import Pagination from './component/Pagination/Pagination.jsx';
 import DataTable from './component/nachaTable/DataTable.jsx';
 import { columns } from './component/nachaTable/columns.jsx';
 import { mockData } from './component/nachaTable/mockData.js';
+import AccountTable from './component/AmountTotalTable/AmountTable.jsx';
+import TaskList from './component/Task/Tasklist.jsx';
 
 
 const App = () => {
@@ -17,7 +19,7 @@ const App = () => {
   }));
   return (
     
-    <div className="App">
+    <div className="App" provider>
     {/* <Pagination 
       data ={dummydate}
       //render row function is passed as a prop to the Pagination component ,it helps to render the data in the table
@@ -25,7 +27,9 @@ const App = () => {
       renderRow ={function (val) {
         return <div>Hello `{val}`</div>
       }}/>   */}
-      <DataTable columns={columns} data={mockData} />
+      {/* <DataTable columns={columns} data={mockData}></DataTable>
+      <AccountTable></AccountTable> */}
+      <TaskList/>
   </div>
   
   );

@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './Store/store'; // Import the store
 
 //reactdom.render is used to render an element or component in virtual dom
 //what needs to render and where to render
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <Provider store={store}>   {/* ✅ Wrap App with Provider */}
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
