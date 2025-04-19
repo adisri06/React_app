@@ -27,9 +27,9 @@ const App = () => {
       renderRow ={function (val) {
         return <div>Hello `{val}`</div>
       }}/>   */}
-      {/* <DataTable columns={columns} data={mockData}></DataTable>
-      <AccountTable></AccountTable> */}
-      <TaskList/>
+      <DataTable columns={columns} data={mockData}></DataTable>
+      <AccountTable></AccountTable>
+      {/* <TaskList/> */}
   </div>
   
   );
